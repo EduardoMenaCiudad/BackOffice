@@ -1,0 +1,14 @@
+C:\Users\emena\source\repos\EXAMEN\DivisasBackofficeAPI\DivisasBackofficeAPI\bin\Debug\netcoreapp2.1\DivisasBackofficeAPI.deps.json
+C:\Users\emena\source\repos\EXAMEN\DivisasBackofficeAPI\DivisasBackofficeAPI\bin\Debug\netcoreapp2.1\DivisasBackofficeAPI.runtimeconfig.json
+C:\Users\emena\source\repos\EXAMEN\DivisasBackofficeAPI\DivisasBackofficeAPI\bin\Debug\netcoreapp2.1\DivisasBackofficeAPI.runtimeconfig.dev.json
+C:\Users\emena\source\repos\EXAMEN\DivisasBackofficeAPI\DivisasBackofficeAPI\bin\Debug\netcoreapp2.1\DivisasBackofficeAPI.dll
+C:\Users\emena\source\repos\EXAMEN\DivisasBackofficeAPI\DivisasBackofficeAPI\bin\Debug\netcoreapp2.1\DivisasBackofficeAPI.pdb
+C:\Users\emena\source\repos\EXAMEN\DivisasBackofficeAPI\DivisasBackofficeAPI\obj\Debug\netcoreapp2.1\DivisasBackofficeAPI.csprojAssemblyReference.cache
+C:\Users\emena\source\repos\EXAMEN\DivisasBackofficeAPI\DivisasBackofficeAPI\obj\Debug\netcoreapp2.1\DivisasBackofficeAPI.csproj.CoreCompileInputs.cache
+C:\Users\emena\source\repos\EXAMEN\DivisasBackofficeAPI\DivisasBackofficeAPI\obj\Debug\netcoreapp2.1\DivisasBackofficeAPI.RazorAssemblyInfo.cache
+C:\Users\emena\source\repos\EXAMEN\DivisasBackofficeAPI\DivisasBackofficeAPI\obj\Debug\netcoreapp2.1\DivisasBackofficeAPI.RazorAssemblyInfo.cs
+C:\Users\emena\source\repos\EXAMEN\DivisasBackofficeAPI\DivisasBackofficeAPI\obj\Debug\netcoreapp2.1\DivisasBackofficeAPI.AssemblyInfoInputs.cache
+C:\Users\emena\source\repos\EXAMEN\DivisasBackofficeAPI\DivisasBackofficeAPI\obj\Debug\netcoreapp2.1\DivisasBackofficeAPI.AssemblyInfo.cs
+C:\Users\emena\source\repos\EXAMEN\DivisasBackofficeAPI\DivisasBackofficeAPI\obj\Debug\netcoreapp2.1\DivisasBackofficeAPI.RazorTargetAssemblyInfo.cache
+C:\Users\emena\source\repos\EXAMEN\DivisasBackofficeAPI\DivisasBackofficeAPI\obj\Debug\netcoreapp2.1\DivisasBackofficeAPI.dll
+C:\Users\emena\source\repos\EXAMEN\DivisasBackofficeAPI\DivisasBackofficeAPI\obj\Debug\netcoreapp2.1\DivisasBackofficeAPI.pdb
