@@ -1,4 +1,5 @@
 ﻿using DivisasBackofficeAPI.DatabaseContext;
+using DivisasBackofficeAPI.Entities;
 using DivisasBackofficeAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -8,9 +9,9 @@ namespace DivisasBackofficeAPI.Controllers
     [Route("api/Currencies")]
     public class CurrenciesController : ControllerBase
     {
-        public CurrencyRepository Repository { get; set; }
+        public IRepository<Currency> Repository { get; set; }
 
-        public CurrenciesController(CurrencyRepository repository)
+        public CurrenciesController(IRepository<Currency> repository)
         {
             Repository = repository;
         }
@@ -18,7 +19,9 @@ namespace DivisasBackofficeAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            Repository.
+            var result = await Repository.Get();
+
+            return Ok(result);
         }
         
     }

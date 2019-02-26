@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DivisasBackofficeAPI.DatabaseContext;
+using DivisasBackofficeAPI.Entities;
+using DivisasBackofficeAPI.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,7 +32,11 @@ namespace DivisasBackofficeAPI
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             var connectionString = Configuration.GetConnectionString("DivisasDatabase");
+
             services.AddDbContext<DivisasContext>(options => options.UseSqlServer(connectionString));
+
+            services.AddScoped<IRepository<Currency>, CurrencyRepository>(); 
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
