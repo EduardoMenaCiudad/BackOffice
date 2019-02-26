@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="DatabaseContext\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
