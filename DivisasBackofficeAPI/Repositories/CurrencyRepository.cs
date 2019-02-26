@@ -1,29 +1,34 @@
 ﻿using DivisasBackofficeAPI.DatabaseContext;
 using DivisasBackofficeAPI.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace DivisasBackofficeAPI.Repositories
 {
     public class CurrencyRepository : IRepository<Currency>
     {
-        public DivisasContext Context { get; set; }
+        private DivisasContext Context { get; set; }
+        public DbSet<Currency> Currencies { get; }
 
         public CurrencyRepository(DivisasContext context)
         {
             Context = context;
+            Currencies = context.Currencies; 
         }
 
-        public Task Create(Currency toCreate)
+        public async Task Create(Currency toCreate)
         {
-            throw new NotImplementedException();
+            await Currencies.AddAsync(toCreate);
+            await SaveChangesAsync();
         }
 
-        public Task Delete(int id)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            var toDelete = await Currencies.FirstOrDefaultAsync(x => x.Id == id);
+            Currencies.Remove(toDelete);
+            await SaveChangesAsync();
         }
 
         public void Dispose()
@@ -36,32 +41,39 @@ namespace DivisasBackofficeAPI.Repositories
         {
             if (disposing)
             {
-                if(this.Context != null)
+                if (this.Context != null)
                 {
                     this.Context.Dispose();
-                    this.Context = null; 
+                    this.Context = null;
                 }
             }
         }
 
-        public Task<IEnumerable<Currency>> Get()
+        public async Task<IEnumerable<Currency>> Get()
         {
-            throw new NotImplementedException();
+            var result = await Currencies.ToListAsync();
+            return result;
         }
 
-        public Task<Currency> Get(int id)
+        public async Task<Currency> Get(int id)
         {
-            throw new NotImplementedException();
+            var result = await Currencies.FirstOrDefaultAsync(x => x.Id == id);
+            return result;
         }
 
-        public Task SaveChangesAsync()
+        public async Task SaveChangesAsync()
         {
-            throw new NotImplementedException();
+            await Context.SaveChangesAsync();
         }
 
-        public Task Update(Currency toUpdate)
+        public async Task Update(Currency toUpdate)
         {
-            throw new NotImplementedException();
+            var retrieved = await Currencies.FirstOrDefaultAsync(x => x.Id == toUpdate.Id);
+
+            Currencies.Remove(retrieved);
+            Currencies.Add(toUpdate);
+
+            await SaveChangesAsync();
         }
     }
 }
