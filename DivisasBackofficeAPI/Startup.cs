@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DivisasBackofficeAPI.DatabaseContext;
 using DivisasBackofficeAPI.Entities;
+using DivisasBackofficeAPI.Filters;
 using DivisasBackofficeAPI.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,7 +30,15 @@ namespace DivisasBackofficeAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc(
+                
+                config => {
+
+                    config.Filters.Add(new LogActionFilter());
+
+                }
+                
+                ).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             var connectionString = Configuration.GetConnectionString("DivisasDatabase");
 
